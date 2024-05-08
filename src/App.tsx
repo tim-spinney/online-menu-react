@@ -5,6 +5,7 @@ import './App.css'
 // 4. (continued from MenuItem.tsx) import it where we're going to plug it in
 
 import MenuSection from './components/MenuSection'
+import { mockData } from './mockData'
 
 
 /* function with CapitalizedName
@@ -23,7 +24,7 @@ function App() {
     </nav>
     <main>
         <h1>SU Bytes</h1>
-        <MenuSection />
+        <MenuSection data={mockData[0]} />
         <section>
             <h2>Bevs</h2>
             <article>
