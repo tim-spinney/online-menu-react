@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // 4. (continued from MenuItem.tsx) import it where we're going to plug it in
 import MenuItem from './components/MenuItem'
+import MenuSection from './components/MenuSection'
 import { mockData } from './mockData'
 
 /* function with CapitalizedName
@@ -22,6 +23,7 @@ function App() {
     </nav>
     <main>
         <h1>SU Bytes</h1>
+        <MenuSection />
         <section>
             <h2>Apps</h2>
             {/* 5. Put our component's name in <> in some other component's return value */}
