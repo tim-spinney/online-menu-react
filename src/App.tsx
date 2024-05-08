@@ -24,17 +24,9 @@ function App() {
     </nav>
     <main>
         <h1>SU Bytes</h1>
-        <MenuSection data={mockData[0]} />
-        <section>
-            <h2>Bevs</h2>
-            <article>
-                <h3>Water</h3>
-                <div>$0.00</div>
-                <input type="number" value="0" />
-                <button>Add</button>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quos voluptate voluptatibus impedit, vitae sint officia incidunt, repudiandae, delectus possimus fugit quae nihil laboriosam asperiores culpa. Repellat cumque at rerum.</p>
-            </article>
-        </section>
+        {mockData.map(
+            (menuSectionModel) => <MenuSection data={menuSectionModel} />
+        )}
         <section>
             <h2>Mains</h2>
             <article>

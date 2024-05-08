@@ -21,5 +21,15 @@ export const mockData: MenuSection[] = [
                 description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quos voluptate voluptatibus impedit, vitae sint officia incidunt, repudiandae, delectus possimus fugit quae nihil laboriosam asperiores culpa. Repellat cumque at rerum.'
             },
         ]
+    },
+    {
+        title: 'Bevs',
+        items: [
+            {
+                name: 'Water',
+                price: 0.00,
+                description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quos voluptate voluptatibus impedit, vitae sint officia incidunt, repudiandae, delectus possimus fugit quae nihil laboriosam asperiores culpa. Repellat cumque at rerum.'
+            },
+        ]
     }
 ];
