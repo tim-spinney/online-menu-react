@@ -3,12 +3,19 @@ import './App.css'
 
 import MenuSection from './components/MenuSection'
 import { mockData } from './mockData'
+import { useState } from 'react'
 
 
 /* function with CapitalizedName
    returns a single JSX (pseudo-HTML) element
 */
 function App() {
+  const [itemCount, setItemCount] = useState(0)
+
+  const addItems = (quantity: number) => {
+    setItemCount(oldCount => oldCount + quantity)
+  }
+
   return (
     <>
       <nav>
@@ -18,13 +25,13 @@ function App() {
                 🛒
             </span>
             <span>
-                <span id="item-count">0</span> items: <span id="price-total">$0.00</span>
+                <span id="item-count">{itemCount}</span> items: <span id="price-total">$0.00</span>
             </span>
         </div>
     </nav>
     <main>
         {mockData.map(
-            (menuSectionModel) => <MenuSection data={menuSectionModel} />
+            (menuSectionModel) => <MenuSection data={menuSectionModel} addItems={addItems} />
         )}
         <section>
             <h2>Mains</h2>
