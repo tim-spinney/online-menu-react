@@ -9,7 +9,7 @@ function MenuItem(props: MenuItemProps) {
     const data = props.data
     // 2. return a JSX element
     return (
-        <article>
+        <article className="menu-item">
             <h3>{data.name}</h3>
             <div className="price">${data.price}</div>
             <input type="number" value="0" />

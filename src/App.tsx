@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 // 4. (continued from MenuItem.tsx) import it where we're going to plug it in
 
@@ -15,15 +12,17 @@ function App() {
   return (
     <>
       <nav>
-        <div aria-label="shopping cart">
-            🛒
-        </div>
+        <h1>SU Bytes</h1>
         <div>
-            <span id="item-count">0</span> items: <span id="price-total">$0.00</span>
+            <span aria-label="shopping cart">
+                🛒
+            </span>
+            <span>
+                <span id="item-count">0</span> items: <span id="price-total">$0.00</span>
+            </span>
         </div>
     </nav>
     <main>
-        <h1>SU Bytes</h1>
         {mockData.map(
             (menuSectionModel) => <MenuSection data={menuSectionModel} />
         )}
