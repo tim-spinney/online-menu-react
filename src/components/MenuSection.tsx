@@ -3,7 +3,6 @@ import { MenuSection as MenuSectionModel } from '../model/MenuSection'
 
 interface MenuSectionProps {
     data: MenuSectionModel
-    addItems: Function
 }
 
 function MenuSection(props: MenuSectionProps) {
@@ -14,7 +13,7 @@ function MenuSection(props: MenuSectionProps) {
             {/* 5. Put our component's name in <> in some other component's return value */}
             {/* becomes React.createElement(MenuItem, { data: mockData[0] }) */} 
             {data.items.map(menuItem => 
-                <MenuItem key={menuItem.name} data={menuItem} addItems={props.addItems} />
+                <MenuItem key={menuItem.name} data={menuItem} />
             )}
         </section>
     )

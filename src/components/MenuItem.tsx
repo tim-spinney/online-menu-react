@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import {MenuItem as MenuItemModel} from '../model/MenuItem'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../shoppingCartSlice'
 
 interface MenuItemProps {
     data: MenuItemModel
-    addItems: Function
 }
 
 // 1. function with a capitalized name
 function MenuItem(props: MenuItemProps) {
     const [quantity, setQuantity] = useState(0)
     const data = props.data
+    const dispatch = useDispatch()
 
     const quantityChanged = (event: any) => {
         const newQuantity = parseInt(event.target.value)
@@ -19,7 +21,8 @@ function MenuItem(props: MenuItemProps) {
     }
 
     const addClicked = () => {
-        props.addItems(quantity)
+        const action = addItem({ itemName: data.name, quantity })
+        dispatch(action)
         setQuantity(0)
     }
 
