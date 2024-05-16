@@ -13,6 +13,28 @@ nav {
     font-size: 24px;
     margin-block-start: 0;
     margin-block-end: 0;
+
+    &:hover {
+      color: black;
+      transition: color 1s ease-in-out;
+    }
+  }
+}
+
+h3 {
+  margin-block-start: 0;
+}
+
+.menu-item {
+  border: 1px solid #EEE;
+  padding: 8px;
+  margin: 32px 12px;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, .2);
+
+  & input {
+    max-width: 64px;
   }
 }
 
